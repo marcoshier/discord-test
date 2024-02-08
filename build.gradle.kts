@@ -10,7 +10,7 @@ val applicationMainClass = "TemplateProgramKt"
 
 /**  ## additional ORX features to be added to this project */
 val orxFeatures = setOf<String>(
-//  "orx-boofcv",
+    "orx-boofcv",
     "orx-camera",
 //  "orx-chataigne",
     "orx-color",
@@ -52,7 +52,7 @@ val orxFeatures = setOf<String>(
 //  "orx-property-watchers",
 //  "orx-quadtree",
 //  "orx-rabbit-control",
-//  "orx-realsense2",
+   "orx-realsense2",
 //  "orx-runway",
     "orx-shade-styles",
 //  "orx-shader-phrases",
@@ -109,11 +109,13 @@ repositories {
 }
 
 dependencies {
-
+    implementation("org.bytedeco:librealsense2:2.53.1-1.5.9")
+    implementation("org.openrndr.extra:orx-realsense2-natives-windows:0.4.5-alpha1")
 //    implementation(libs.jsoup)
-//    implementation(libs.gson)
+    implementation(libs.gson)
 //    implementation(libs.csv)
-
+    implementation("dev.kord:kord-core:0.13.1")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.slf4j.api)
     implementation(libs.kotlin.logging)
